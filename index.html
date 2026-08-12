@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>시설 접수 지연 안내</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6f8;
+    --card:#ffffff;
+    --ink:#1c2530;
+    --sub:#5b6673;
+    --line:#e4e8ed;
+    --accent:#1f6feb;
+    --accent-soft:#eaf2ff;
+    --warm:#b9741a;
+    --warm-soft:#fdf4e6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    display:flex;
+    justify-content:center;
+    padding:24px 16px 48px;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{width:100%;max-width:520px}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 2px 14px rgba(28,37,48,.06);
+  }
+  .head{
+    padding:26px 24px 22px;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#fbfcfd 0%,#ffffff 100%);
+  }
+  .badge{
+    display:inline-block;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.02em;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border-radius:999px;
+    padding:5px 12px;
+    margin-bottom:12px;
+  }
+  h1{font-size:22px;line-height:1.45;font-weight:700;letter-spacing:-.01em}
+  .period{
+    margin-top:14px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:500;
+    color:var(--warm);
+    background:var(--warm-soft);
+    border-radius:10px;
+    padding:8px 12px;
+  }
+  .body{padding:24px}
+  .msg{font-size:16px;line-height:1.85;color:var(--ink)}
+  .msg + .msg{margin-top:14px}
+  .msg .soft{color:var(--sub);font-size:15px}
+  .divider{height:1px;background:var(--line);margin:24px 0}
+  .label{
+    font-size:13px;font-weight:700;color:var(--sub);
+    letter-spacing:.04em;margin-bottom:12px;
+  }
+  .contacts{display:flex;flex-direction:column;gap:10px}
+  a.contact{
+    display:flex;align-items:center;justify-content:space-between;
+    text-decoration:none;color:inherit;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:16px 18px;
+    background:#fdfefe;
+    transition:.15s;
+  }
+  a.contact:hover{border-color:var(--accent);background:var(--accent-soft)}
+  .c-name{font-size:16px;font-weight:700}
+  .c-desc{font-size:13px;color:var(--sub);margin-top:3px}
+  .c-num{
+    font-size:20px;font-weight:700;color:var(--accent);
+    letter-spacing:.04em;font-variant-numeric:tabular-nums;
+  }
+  .foot{
+    padding:16px 24px 20px;
+    border-top:1px solid var(--line);
+    font-size:13px;color:var(--sub);text-align:center;line-height:1.7;
+  }
+  @media print{
+    body{background:#fff;padding:0}
+    .card{box-shadow:none;border:none}
+    a.contact{background:#fff}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="head">
+      <span class="badge">안내 말씀</span>
+      <h1>연휴 기간 접수가<br>조금 늦어질 수 있습니다</h1>
+      <div class="period">📅 8월 17일(월)까지</div>
+    </div>
+
+    <div class="body">
+      <p class="msg">
+        연휴와 담당자 휴가가 겹치면서 접수 처리가 평소보다 조금 늦어질 수 있습니다.
+        너그러운 양해를 부탁드립니다.
+      </p>
+      <p class="msg soft">
+        급하게 처리가 필요하신 경우에는 아래로 바로 연락 주시면
+        신속히 도와드리겠습니다.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="label">긴급 연락처</div>
+      <div class="contacts">
+        <a class="contact" href="tel:6263">
+          <span>
+            <span class="c-name">전기실</span>
+            <span class="c-desc">전기·조명·전원 관련</span>
+          </span>
+          <span class="c-num">6263</span>
+        </a>
+        <a class="contact" href="tel:6262">
+          <span>
+            <span class="c-name">기계실</span>
+            <span class="c-desc">냉난방·급수·설비 관련</span>
+          </span>
+          <span class="c-num">6262</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="foot">
+      시설안전과<br>
+      기다려 주셔서 감사합니다.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
